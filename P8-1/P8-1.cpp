@@ -3,16 +3,22 @@
 
 using namespace std;
 
-int countCharacter(string);
+int countvowel(string);
 
 int main() {
 
 	string goblygook = "Zoinks Scoob";
-	cout << countCharacter(goblygook);
+	cout << countvowel(goblygook);
 
 
 }
 
-int countCharacter(string str) {
-	return str.length();
+int countvowel(string str) {
+	int vowelcount = 0;
+	char letter;
+	for (int i = 0; i <= str.length(); i++) {
+		letter = str[i];
+		if (letter == 'A' || letter == 'a' || letter == 'e' || letter == 'E' || letter == 'I' || letter == 'i' || letter == 'o' || letter == 'O' || letter == 'U' || letter == 'u') vowelcount++;
+	}
+	return vowelcount;
 }
