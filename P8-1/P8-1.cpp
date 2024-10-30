@@ -6,9 +6,13 @@ using namespace std;
 int countvowel(string);
 
 int main() {
-
-	string goblygook = "Zoinks Scoob";
-	cout << countvowel(goblygook);
+	string strng;
+	while (true) {
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, strng);
+		if (strng == "Q")break;
+		cout << "Vowel count: " << countvowel(strng) << endl;
+	}
 
 
 }
